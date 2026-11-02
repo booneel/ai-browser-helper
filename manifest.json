@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AI 브라우저 설명 도우미",
+  "version": "1.0.0",
+  "description": "선택한 문장 또는 현재 웹 탭 화면을 AI로 설명합니다.",
+  "permissions": ["activeTab", "scripting", "contextMenus", "sidePanel", "storage"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "panel.html" },
+  "action": { "default_title": "AI 설명 도우미 열기" },
+  "options_page": "options.html",
+  "commands": { "_execute_action": { "suggested_key": { "default": "Ctrl+Shift+Y" }, "description": "AI 설명 도우미 열기" } }
+}
